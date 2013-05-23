@@ -1,0 +1,25 @@
+***********************  commit example ***************************
+$git add *.c add	//the files with c extenstion
+$git add README 	//add README file
+$git commit -m 'initial project verion' //commiting the added files		
+*******************************************************************
+
+*********************** clone example  ********************************
+$git clone git://github.com/schacon.grit.git
+***********************************************************************
+
+***********************checking the status of file*********************
+$git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working
+#
+#       modified:   ProGit/ch2.txt
+#
+*************************************************************************
+
+************************* Staging Modified Files ************************
+
+
+
