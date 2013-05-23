@@ -1,15 +1,15 @@
 ***********************  commit example ***************************
-$git add *.c add	//the files with c extenstion
-$git add README 	//add README file
-$git commit -m 'initial project verion' //commiting the added files		
+$ git add *.c add	//the files with c extenstion
+$ git add README 	//add README file
+$ git commit -m 'initial project verion' //commiting the added files		
 *******************************************************************
 
 *********************** clone example  ********************************
-$git clone git://github.com/schacon.grit.git
+$ git clone git://github.com/schacon.grit.git
 ***********************************************************************
 
 ***********************checking the status of file*********************
-$git status
+$ git status
 # On branch master
 # Changes not staged for commit:
 #   (use "git add <file>..." to update what will be committed)
@@ -20,6 +20,39 @@ $git status
 *************************************************************************
 
 ************************* Staging Modified Files ************************
+The main idea is that if a file is staged and after that modified, the commit 
+will contains the version of file before modifying.
+*************************************************************************
 
+***********************Ignoring files************************************
+$ cat .gitignore  // creating the file that contains the ignore patterns
+*.[oa]		      // The regexp pattern, So the files ending with o or a
+				  //	will be ignored
+*~
 
+# a comment – this is ignored
+*.a       # no .a files
+!lib.a    # but do track lib.a, even though you're ignoring .a files above
+/TODO     # only ignore the root TODO file, not subdir/TODO
+build/    # ignore all files in the build/ directory
+doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt
+*************************************************************************
 
+**************** Viewing Your Staged and Unstaged Changes****************
+$ git diff     //shows the difference between staged and unstaged files
+--- a/ProGit/README
++++ b/ProGit/README
+@@ -1 +1,2 @@
+-simple file
+\ No newline at end of file
++simple file
++modify to see the difference
+
+$ git diff --staged  //(or -- cached) shows the difference between commited and staged
+*************************************************************************
+
+************* Commiting Changes *****************************************
+$ git commit   // commit, will ask for comment
+$ git commit -m 'commit message'  // commit
+
+*************************************************************************
