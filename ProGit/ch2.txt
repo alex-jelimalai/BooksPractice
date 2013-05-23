@@ -54,5 +54,10 @@ $ git diff --staged  //(or -- cached) shows the difference between commited and 
 ************* Commiting Changes *****************************************
 $ git commit   // commit, will ask for comment
 $ git commit -m 'commit message'  // commit
+$ git commit -v //  commit that shows the difference
+
+*************************************************************************
+
+*************** Skipping the Staging Area********************************
 
 *************************************************************************
