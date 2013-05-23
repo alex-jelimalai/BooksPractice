@@ -59,5 +59,16 @@ $ git commit -v //  commit that shows the difference
 *************************************************************************
 
 *************** Skipping the Staging Area********************************
-
+$ git commit -a -m 'commit message'  // commit without needing to add files in staging area
 *************************************************************************
+
+************* Removing files *****************************************
+$ git rm  -- cached <file name> //remove file from staging area
+$ git rm <file name> -f    //remove the file from disk if it is in staging area
+**********************************************************************
+
+*******************Moving Files*********************************************
+$ git mv file.txt rename.txt    // renaming file, only if it is staging area
+
+****************************************************************************
+
