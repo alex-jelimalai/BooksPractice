@@ -72,3 +72,61 @@ $ git mv file.txt rename.txt    // renaming file, only if it is staging area
 
 ****************************************************************************
 
+					Viewing the Commit History
+*****************Viewing the Commit History ********************************
+$ git log
+commit 6db3cda071b1ec6ed7b4122e3fc886aa24
+Author: alex-jelimalai <alex.jeli@mail.ru
+Date:   Thu May 23 17:35:28 2013 +0300
+
+$ git log -p -2 // -p shows differences, -2 only last 2 commits
+$ git log --stat // show the some additional summary for each commit
+$ git log  -- pretty=oneline //or: short, full,fuller,format:'<own format>'
+****************************************************************************
+
+**********************Limiting Log Output***********************************
+$ git log --since=1.days      //getting commits logs for last day
+## Other options to filter the log
+since, after,until,before,author,commiter
+
+****************************************************************************
+
+************************Using a GUI to Visualize History********************
+$gitk
+****************************************************************************
+
+Undoing Things:
+**********************Changing Your Last Commit*****************************
+$ git commit  --amend //commit to previous commit
+****************************************************************************
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
