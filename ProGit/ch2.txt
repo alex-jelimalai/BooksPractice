@@ -1,3 +1,6 @@
+								*****GIT BASIS*****
+
+
 ***********************  commit example ***************************
 $ git add *.c add	//the files with c extenstion
 $ git add README 	//add README file
@@ -132,11 +135,16 @@ $ git push origin --tags  //push all the tags
 
 *****************************************************************************
 
-
-
-
-
-
+		
+							*******GIT BRANGHING*******
+							
+_______________________________________________________________________________
+___________________________ Branch Management__________________________________							
+_______________________________________________________________________________			
+$ git branch testing			//creating the branch testing
+$ git checkout testing			//moving the HEAD to point to the testing branch
+			
+			
 
 
 
