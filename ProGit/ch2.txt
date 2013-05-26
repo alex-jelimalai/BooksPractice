@@ -123,9 +123,14 @@ $ git remote add pb git://github.com/paulboone/tacgit.git
 ****************************************************************************
 
 ************************Fetching and pulling from Your Remotes**************
-$ git fetch // like an update
+$ git fetch // like an update, but witout merging
 ****************************************************************************
 
+*******************************Sharing Tags**********************************
+$ git push origin v1.1   //push the tag
+$ git push origin --tags  //push all the tags
+
+*****************************************************************************
 
 
 
