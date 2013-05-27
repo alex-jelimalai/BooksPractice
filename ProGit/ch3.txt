@@ -11,8 +11,24 @@ $ git checkout -b iss53		//creating the iss53
 **********************************************************************************
 ************************** Merging ********************************************
 $ git merge iss52	//merging the iss52 branch
+$ git mergetool
+**********************************************************************************
+----------------------------------------------------------------------------------
+---------------------------Branch Management--------------------------------------							
+----------------------------------------------------------------------------------
+$ git branch --merged  		//display the merged branches
+$ git branch --no-merged	//display the no merged brances
 
-
+********************Branching Workflows*******************************************
+ git push origin serverfix:awesomebranch 	//putting the serverfix brach to awesomebranch
+ $ git push origin :serverfix
+To git@github.com:schacon/simplegit.git
+ - [deleted]         serverfix
+**********************************************************************************
+********************Remote Branching*********************************************
+$ git push origin :serverfix
+To git@github.com:schacon/simplegit.git
+ - [deleted]         serverfix
 **********************************************************************************
 
 
