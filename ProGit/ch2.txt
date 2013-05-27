@@ -123,8 +123,12 @@ $ git remote add pb git://github.com/paulboone/tacgit.git
 ****************************************************************************
 
 ************************Fetching and pulling from Your Remotes**************
+<<<<<<< HEAD
 $ git fetch // like an update without merge
 $ git pull  // update
+=======
+$ git fetch // like an update, but witout merging
+>>>>>>> e88cbf891a26de0095171ac191e4624a77c59da0
 ****************************************************************************
 ************************Pushing Your Remotes********************************
 $ git push origin master
@@ -154,6 +158,11 @@ $ git tag v1.4-lw    / To create a lightweight tag, don’t supply the -a, -s, or 
 ****************************************************************************
 
 
+*******************************Sharing Tags**********************************
+$ git push origin v1.1   //push the tag
+$ git push origin --tags  //push all the tags
+
+*****************************************************************************
 
 
 
