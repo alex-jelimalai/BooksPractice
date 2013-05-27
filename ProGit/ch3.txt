@@ -7,5 +7,10 @@ $ git branch iss53     	//create a branch
 $ git checkout iss53	  	//switching to iss53 branch
 
 $ git checkout -b iss53		//creating the iss53 
+& git branch -d iss53 		//deleting the banch
 **********************************************************************************
+************************** Merging ********************************************
+$ git merge iss52	//merging the iss52 branch
+**********************************************************************************
+
 
