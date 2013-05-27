@@ -2,3 +2,4 @@ simple file
 modify to see the difference
 skipping the staging area
 try amend
+try merging between master and testBranch
