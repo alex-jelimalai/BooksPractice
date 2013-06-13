@@ -4,3 +4,5 @@ skipping the staging area
 try amend
 try merging between master and testBranch
 changes in master
+
+modify in master
