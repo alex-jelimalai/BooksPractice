@@ -8,4 +8,8 @@ $ git am  0001-limit-log- function.patch 	//apply the patch
 $ git log <branch> --not master   //shows the commit that are only in in <branch> and not in master
 
 $ git describe master    //nearest annotated tag created from branch
+
 $ git shortlog  --no- merges master  -- not v1.0.1    //Summery of commits since version v1.0.1
+
+$ git shortlog  --no- merges master  -- not v1.0.1    //Summery of commits since version v1.0.1
+

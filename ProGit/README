@@ -4,3 +4,11 @@ skipping the staging area
 try amend
 try merging between master and testBranch
 changes in master
+
+modify in master
+preparing for format-patch
+second commit for patch
+
+1)Trying to check the log 
+2)Second commit for log no master
+
