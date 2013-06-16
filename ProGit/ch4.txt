@@ -1,0 +1,8 @@
+//patches
+$ git format-patch -M origin/master 		//creating a patch
+$ git apply 0002-Third.patch 				// apply the patch
+$ git apply  -- check  0002-Third.patch 	//checks if the patch can be applied
+$ git am  0001-limit-log- function.patch 	//apply the patch
+
+------------------Determining what is introduced-----------------------------
+$ git log <branch> --not master   //shows the commit that are only in in <branch> and not in master
