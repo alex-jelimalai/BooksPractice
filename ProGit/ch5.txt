@@ -1,25 +1,15 @@
-------------------Revision Selection --------------------------------------
-$ git rev-parse <branch>  		//show the SHA the <branch> point to
-$ git reflog 					//the log where HEAD and branch references have been
-$ git show HEAD@{5}				//show the log for HEAD@{5}	
-$ git show master@{yesterday}	//show the log for yestarday
-$ git show HEAD@{2.months.ago} 	//show the log for 2 months ago
+//patches
+$ git format-patch -M origin/master 		//creating a patch
+$ git apply 0002-Third.patch 				// apply the patch
+$ git apply  -- check  0002-Third.patch 	//checks if the patch can be applied
+$ git am  0001-limit-log- function.patch 	//apply the patch
 
-#######   Ancestry References    #############
-$ git show HEAD^    	// show log for parrent of head
-$ git show d921970^		// show log for parrent of commit with specified SUM
-$ git show HEAD~    	// show log for parrent of head
-$ git show HEAD~3 or $ git show HEAD^^^    //the same
+------------------Determining what is introduced-----------------------------
+$ git log <branch> --not master   //shows the commit that are only in in <branch> and not in master
 
-#######   Commit Ranges    #############
- git log <branch>..master	//all commits in master that are not in specified branch
- 
-$ git log refA..refB
-$ git log ^refA refB
-$ git log refB  -- not refA    //commits that are in refB and are not in refA
+$ git describe master    //nearest annotated tag created from branch
 
-$ git log master...experiment	//shows what is in master or experiment branch, but not common
-$ git log --left-right master...experiment 	//  shows what is in master or experiment branch, but not common
-											//	the option --left-right shows where the commits belong
-											
-------------------   Interactive Staging   --------------------------------------
+$ git shortlog  --no- merges master  -- not v1.0.1    //Summery of commits since version v1.0.1
+
+$ git shortlog  --no- merges master  -- not v1.0.1    //Summery of commits since version v1.0.1
+
