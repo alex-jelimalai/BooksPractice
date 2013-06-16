@@ -1,0 +1,25 @@
+------------------Revision Selection --------------------------------------
+$ git rev-parse <branch>  		//show the SHA the <branch> point to
+$ git reflog 					//the log where HEAD and branch references have been
+$ git show HEAD@{5}				//show the log for HEAD@{5}	
+$ git show master@{yesterday}	//show the log for yestarday
+$ git show HEAD@{2.months.ago} 	//show the log for 2 months ago
+
+#######   Ancestry References    #############
+$ git show HEAD^    	// show log for parrent of head
+$ git show d921970^		// show log for parrent of commit with specified SUM
+$ git show HEAD~    	// show log for parrent of head
+$ git show HEAD~3 or $ git show HEAD^^^    //the same
+
+#######   Commit Ranges    #############
+ git log <branch>..master	//all commits in master that are not in specified branch
+ 
+$ git log refA..refB
+$ git log ^refA refB
+$ git log refB  -- not refA    //commits that are in refB and are not in refA
+
+$ git log master...experiment	//shows what is in master or experiment branch, but not common
+$ git log --left-right master...experiment 	//  shows what is in master or experiment branch, but not common
+											//	the option --left-right shows where the commits belong
+											
+------------------   Interactive Staging   --------------------------------------
