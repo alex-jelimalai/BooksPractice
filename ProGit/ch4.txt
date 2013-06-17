@@ -1,0 +1,14 @@
+				GIT ON SERVER
+		
+		----------The Protocols---------------
+		
+-------------Local------------------		
+$ git clone /opt/git/project.git			//cloning a local repo
+$ git clone file:///opt/git/project.git		//cloning without hardlinks
+-------------SSH------------------		
+$ git clone ssh://user@server:project.git			//cloning a repo
+$ git clone user@server:project.git					//cloning a repo
+
+*************************Getting git on the Server****************************
+$ git clone  -- bare my_project my_project.git    // creating the git repository
+******************************************************************************
