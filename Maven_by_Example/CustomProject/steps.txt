@@ -1,0 +1,31 @@
+1) Generate new Project
+
+$ mvn archetype:generate -DgroupId=org.sonatype.mavenbook.custom \
+	-DartifactId=simple-weather \
+	-Dpackage=org.sonatype.mavenbook \
+	-Dversion=1.0
+
+
+2) Configure the maven-compile-plugin by adding to the configuration
+
+	 <builld>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configutation>
+            </plugin>
+        </plugins>
+    </builld>
+
+3) Add new dependencies for log4j, dom4j, velocity, jaxen
+4) Write the classes
+5) mvn install
+6) Launch the app:
+
+$ mvn exec:java -Dexec.mainClass=org.sonatype.mavenbook.weather.Main
+
+
+	

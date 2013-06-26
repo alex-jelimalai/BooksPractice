@@ -17,3 +17,5 @@ Hello World!
 3) Showing the effectiv pom of project
 
 $ mvn help:effective-pom
+
+4) Site generation
