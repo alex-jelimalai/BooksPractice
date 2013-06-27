@@ -27,5 +27,31 @@ $ mvn archetype:generate -DgroupId=org.sonatype.mavenbook.custom \
 
 $ mvn exec:java -Dexec.mainClass=org.sonatype.mavenbook.weather.Main
 
+7) Showing the jars in the classpaths:
+
+$ mvn dependency:resolve  -  show all dependency
+$ mvn dependency:tree  -  show all dependency in a tree
+
+8) Building a Packaged Command Line Application
+
+	a) add to POM.xml
+	
+	<plugin>
+		<artifactId>maven-assembly-plugin</artifactId>
+		<configuration>
+		<descriptorRefs>
+			<descriptorRef>jar-with-dependencies</descriptorRef>
+		</descriptorRefs>
+		</configuration>
+	</plugin>
+	
+	b) mvn install assembly:assembly
+	
+	c) 	$ cd target
+		$ java -cp simple-weather-1.0-jar-with-dependencies.jar \
+		org.sonatype.mavenbook.weather.Main 10002
+	
+
+
 
 	
