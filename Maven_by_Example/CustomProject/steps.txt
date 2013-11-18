@@ -71,6 +71,8 @@ $ mvn dependency:tree  -  show all dependency in a tree
 	c) 	$ cd target
 		$ java -cp simple-weather-1.0-jar-with-dependencies.jar \
 		org.sonatype.mavenbook.weather.Main 10002
+
+
 	
 
 

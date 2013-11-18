@@ -15,6 +15,7 @@ atlassian-ide-plugin.xml
 *.class
 target/
 Maven_by_Example/
+*.log
 
 #Application tmp and created
 *.pdf

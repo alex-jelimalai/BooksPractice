@@ -26,7 +26,7 @@ java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
 	at java.lang.reflect.Method.invoke(Method.java:597)
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:120)
 Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
-	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.net.URLClassLoader$1.run(URLClassLoadersdfdsfdsfdsfsdf.java:202)
 	at java.security.AccessController.doPrivileged(Native Method)
 	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
