@@ -14,7 +14,6 @@ atlassian-ide-plugin.xml
 # Output
 *.class
 target/
-Maven_by_Example/
 *.log
 
 #Application tmp and created
