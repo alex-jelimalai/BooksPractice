@@ -32,7 +32,28 @@ $ mvn exec:java -Dexec.mainClass=org.sonatype.mavenbook.weather.Main
 $ mvn dependency:resolve  -  show all dependency
 $ mvn dependency:tree  -  show all dependency in a tree
 
-8) Building a Packaged Command Line Application
+8) Unit tests
+	8.1)
+		Adding the plugin to run unit test.
+			
+			<plugin>
+			   <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surfire-plugin</artifactId>
+                <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>			- will ingore the failure, not recomended
+                </configutation>
+            </plugin>
+
+	8.2) 
+		Skipping the tests:
+		
+			$ mvn install -Dmaven.test.skip=true
+		or
+			<configuration>
+				<skip>true</skip>
+			</configuration>
+
+9) Building a Packaged Command Line Application
 
 	a) add to POM.xml
 	

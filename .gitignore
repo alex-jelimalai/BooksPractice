@@ -1,0 +1,21 @@
+# IntelliJ IDEA
+*.iml
+*.ipr
+*.iws
+.idea/
+atlassian-ide-plugin.xml
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+
+# Output
+*.class
+target/
+Maven_by_Example/
+
+#Application tmp and created
+*.pdf
+nbactions.xml
