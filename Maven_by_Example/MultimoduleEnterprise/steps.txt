@@ -74,3 +74,5 @@ Plugins:
 	hibernate3-maven-plugin
 
 Adding Main class
+mvn assembly:assembly
+mvn hibernate3:hbm2ddl
