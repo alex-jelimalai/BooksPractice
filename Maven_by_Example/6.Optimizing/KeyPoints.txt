@@ -1,0 +1,136 @@
+1) Optimizing POM
+	1.1)dependency Management
+	
+	dependencyMangement control the dependency verions of dependency needed in project
+	
+	example: 
+		in parent  write
+		
+		<dependencyManagement>
+			<dependencies>
+			  <dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring</artifactId>
+				<version>2.0.7</version>
+			  </dependency>
+			</dependancies>
+		 </dependencyManagement>
+		 
+		 in children the dependency can be indicated
+		 	<dependencies>
+			 <dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring</artifactId>
+			  </dependency>
+			</dependencies>
+			
+	In this case the version of dependacy should be changed only in one place, in dependacy mandagement		
+	Also in dependency management can be written the exclusion of a depencancy of dependency:
+	e.g  
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate</artifactId>
+			<version>3.2.5.ga</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.transaction</groupId>
+					<artifactId>jta</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+	1.2) Properties
+		Declaration:
+		
+		<properties>
+			<hibernate.annotations.version>3.3.0.ga</hibernate.annotations.version>
+		</properties>
+		Using:
+		  <version>${hibernate.annotations.version}</version>
+		  
+	1.3) ${project.version} and ${project.groupId}. 
+		Once the sibling project share the same group and version dependency between them can be written using  ${project.version} and ${project.groupId}
+		Example:
+			<groupId>${project.groupId}</groupId>
+			<artifactId>simple-persist</artifactId>
+			<version>${project.version}</version>
+			
+	1.4) Optimizing with the Maven Dependency Plugin
+		mvn dependency:analyze dependency analyzing
+		Can help to find used dependency but not declared. 
+		mvn dependency:
+		
+2) The Project Object Model
+	1) General POM information
+	2) Build settings
+	3) Build environment
+	4)POM relationships
+	
+	2.1) mvn help:effective-pom - show one pom combinet from Super pom and project, subrojects Pom's
+	2.2) project version: 
+		e.g: <major version>.<minor version>.<incremental version>-<qualifier> 1.3.5-SNAPSHOT
+	SNAPSHOT - this inicate that the project is under development and the components are deployed containing the UCT time in their description
+	
+	2.3)Property References
+		a) env - Environment sustem properties e.g ${env.PATH}
+		b) porject - Project properties e.g.  ${project.groupId}
+		c)settings - settings properties e.g. ${settings.offline}
+		
+	
+	2.4) Project Dependencies
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-servlet_2.4_spec</artifactId>
+			<version>1.0</version>
+			<scope>provided</scpe>
+		</dependency>
+		2.4.1)
+			Scopes:
+			compile(default scope) - dependency are packaged
+			provided - dependency is available only in development but are bot packaged
+			runtime -  dependency needed only at runtime, not at compilation time
+			test - dependency at test compilation and execution
+			system - as provided just is needed to local a JAR file using systemPath
+	2.5) Project Relationships
+		The modules represent the projects needed to be considered in a project
+		The inheritance represent the sets of dependancies, plugins etc..., that are inherited from parent to children
+
+3) Build Lifecycle
+	3.1) Clean lifecycle
+		a)Add in  <phase>pre-clean</phase> a custom ant behavior. In this case when mvn clean will be executed to MAVEN can be assigned different tasks
+		b) Example of adding a task to maven-clean-plugin
+			<project>
+			  <modelVersion>4.0.0</modelVersion>
+			  ...
+			  <build>
+				 <plugins>
+				  <plugin>
+					<artifactId>maven-clean-plugin</artifactId>
+					<configuration>
+					  <filesets>
+						<fileset>
+						  <directory>target-other</directory>
+						  <includes>
+							<include>*.class</include>
+						  </includes>
+						</fileset>
+					  </filesets>
+					</configuration>
+				  </plugin>
+				</plugins>
+			  </build>
+			</project>
+			
+	3.2) Default lifecycle		
+	3.3) Site lifecycle		
+	
+	3.4) package specific lifesycle
+	3.5) Common Lifecycle Goals
+	
+			
+			
+
+		
+
+	
+	

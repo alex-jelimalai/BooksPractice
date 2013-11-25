@@ -5,18 +5,20 @@
                              http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.sonatype.mavenbook.multispring</groupId>
+    <groupId>org.sonatype.mavenbook.optimize</groupId>
     <artifactId>simple-parent</artifactId>
     <version>0.8-SNAPSHOT</version>
   </parent>
   <artifactId>simple-weather</artifactId>
   <packaging>jar</packaging>
-  <name>Multi-Spring Chapter Simple Weather API</name>
+
+  <name>Optimization Chapter Simple Weather API</name>
+
   <dependencies>
     <dependency>
-      <groupId>org.sonatype.mavenbook.multispring</groupId>
+      <groupId>${project.groupId}</groupId>
       <artifactId>simple-model</artifactId>
-      <version>0.8-SNAPSHOT</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>log4j</groupId>

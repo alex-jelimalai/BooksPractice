@@ -5,14 +5,14 @@
                              http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.sonatype.mavenbook.multispring</groupId>
+    <groupId>org.sonatype.mavenbook.optimize</groupId>
     <artifactId>simple-parent</artifactId>
     <version>0.8-SNAPSHOT</version>
   </parent>
   <artifactId>simple-model</artifactId>
   <packaging>jar</packaging>
 
-  <name>Multi-Spring Chapter Simple Object Model</name>
+  <name>Optimization Chapter Simple Object Model</name>
 
   <dependencies>
     <dependency>
@@ -22,6 +22,10 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.persistence</groupId>
+      <artifactId>persistence-api</artifactId>
     </dependency>
   </dependencies>
 </project>
