@@ -1,0 +1,4 @@
+1. Create a project with a parent a two  modules
+2. Run command
+mvn -DdescriptorId=project assembly:single
+ three archive are created 
