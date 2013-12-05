@@ -1,0 +1,27 @@
+  
+  <project name="Sample Project">
+    <bannerLeft>
+    <name>Left Banner</name>
+    <src>images/logo.png</src>
+    <href>http://www.google.com</href>
+  </bannerLeft>
+  
+  <bannerRight>
+    <name>Right Banner</name>
+    <src>images/logo.png</src>
+    <href>http://www.yahoo.com</href>
+  </bannerRight>
+  <body>
+  <menu name="Sample Project">
+      <item name="Introduction" href="index.html"/>
+      <item name="News" href="news.html"/>
+      <item name="Features" href="features.html"/>
+      <item name="Installation" href="installation.html"/>
+      <item name="Configuration" href="configuration.html"/>
+	    <item name="System Architecture" href="/developer/architecture.html"  collapse="true" />
+		<item name="Embedder's Guide" href="/developer/embedding.html"/>
+      <item name="FAQ" href="faq.html"/>
+    </menu>
+    <menu ref="reports"/>
+  </body>
+</project>

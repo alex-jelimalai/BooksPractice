@@ -1,0 +1,19 @@
+1) Initial Descriptor
+	 ${basedir}/src/site/site.xml	
+<project name="Sample Project">
+  <bannerLeft>
+    <name>Sonatype</name>
+    <src>images/logo.png</src>
+    <href>http://www.sonatype.com</href>
+  </bannerLeft>
+  <body>
+    <menu name="Sample Project">
+      <item name="Overview" href="index.html"/>      
+    </menu>
+    <menu ref="reports"/>
+  </body>
+</project>
+
+put logo.png logo in ${basedir}/src/site/resources/images.
+and some info in index.apt in  ${basedir}/src/site/apt
+
